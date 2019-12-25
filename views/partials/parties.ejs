@@ -1,0 +1,44 @@
+<%- include('header') %>
+
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+  <div class="jumbotron jumbotron-fluid mb-0 pb-3">
+    <div class="container">
+      <h1 class="display-6 mt-4">Welcome</h1>
+      <p class="lead">Select your party and enjoy, just becarefull the life goes on!</p>
+    </div>
+  </div>
+
+  <div class="container">
+  <table class="table table-hover table-sm">
+    <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Where</th>
+        <th>When</th>
+        <th>Note</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% infos.forEach( info => { %> 
+        <tr>
+          <td><%= info.name %></td>
+          <td><%= info.where %></td>
+          <td><%= info.when %></td>
+          <td><%= info.note %></td>
+          <td>
+            <a href="edit/<%= info._id %>" <i class="fa fa-pencil text-success"></i> </a> ||  
+            <a href="deletes/<%= info._id %>" <i class="fa fa-trash text-danger"></i> </a>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+
+</main>
+
+<%- include('footer') %>
+
+
