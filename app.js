@@ -4,7 +4,7 @@ const port = process.env.PORT || 3000
 const path = require('path')
 const router = require('./router/route')
 
-const mongo = process.env.MONGODB || 'mongodb+srv://dbRogpe:dbRogpe2019@cluster0-ji7tk.mongodb.net/party?retryWrites=true&w=majority'
+const mongo = process.env.MONGODB || 'mongodb+srv://rogpe:Aloha2021@cluster0.s3o0o.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 const mongoose = require('mongoose')
 mongoose.Promise = global.Promise
 
